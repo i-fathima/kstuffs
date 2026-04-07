@@ -1,13 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Privacy</title>
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', Arial, sans-serif;
+            background: #fff;
+            color: #111;
+        }
+
+        .page-header {
+            background: #fff4c2;
+            padding: 42px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #5c2d91;
+            letter-spacing: 0.02em;
+            font-weight: 700;
+        }
+
+        .page-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 36px 20px 60px;
+        }
+
+        .section-title {
+            margin: 0 0 24px;
+            color: #d30e3c;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .page-content p {
+            margin: 0 0 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            font-weight: 600;
+            color: #121212;
+        }
+
+        h3 {
+            margin: 2.5rem 0 1rem;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+            margin: 0;
+            list-style: disc;
+        }
+
+        li {
+            margin-bottom: 0.85rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .services-panel {
+            background: #fde8ee;
+            border-radius: 24px;
+            padding: 32px 20px;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 14px;
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #E61A52;
+            display: grid;
+            place-items: center;
+        }
+
+        .service-icon img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .service-title {
+            margin: 0;
+            font-size: 1rem;
+            color: #d30e3c;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+        }
+
+        .service-text {
+            margin: 0;
+            font-size: 0.98rem;
+            line-height: 1.6;
+            color: #111;
+            font-weight: 600;
+        }
+
+        @media (max-width: 780px) {
+            .services-panel {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 520px) {
+            .services-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header {
+                padding: 30px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="page-header">
         <h1>Privacy Policy</h1>
-        <h2>PRIVACY POLICY</h2>
+    </header>
+    <main class="page-content">
+        <h2 class="section-title">Privacy Policy</h2>
         <p>KIDS STUFFS works to ensure that your privacy is protected when using
             our website. At Sonee Sports Mobile App, we are committed to
             safeguarding the privacy of our users. This Privacy Policy outlines
@@ -68,5 +203,38 @@
             the Maldivian Laws.
         </p>
 
-    </body>
+        <section class="services-panel">
+            <article class="service-card">
+                <div class="service-icon">
+                    <img src="images/privacy/delivery%20icon.png" alt="Delivery icon">
+                </div>
+                <p class="service-title">Delivery</p>
+                <p class="service-text">Delivered within 2 to 3 days</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">
+                    <img src="images/privacy/payment%20icon.png" alt="Payment icon">
+                </div>
+                <p class="service-title">Payment</p>
+                <p class="service-text">Secured payment</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">
+                    <img src="images/privacy/contact%20icon.png" alt="Contact icon">
+                </div>
+                <p class="service-title">Contact</p>
+                <p class="service-text">90000 91245<br>91427 84571</p>
+            </article>
+            <article class="service-card">
+                <div class="service-icon">
+                    <img src="images/privacy/location%20icon.png" alt="Location icon">
+                </div>
+                <p class="service-title">Location</p>
+                <p class="service-text">Salem, Tamilnadu</p>
+            </article>
+        </section>
+
+    </main>
+</body>
+
 </html>
