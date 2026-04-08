@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>Navbar</title>
     <style>
         :root {
+            color-scheme: light;
+            font-family: 'Inter', Arial, sans-serif;
             --brand: #E61A52;
             --dark: #2b1b6c;
             --white: #ffffff;
@@ -20,9 +21,8 @@
 
         body {
             margin: 0;
-            font-family: 'Inter', Arial, sans-serif;
             background: #fff;
-            color: #111;
+            color: var(--text);
         }
 
         .navbar {
@@ -30,7 +30,7 @@
         }
 
         .marquee-bar {
-            background: var(--dark);
+            background: #6048A0;
             color: var(--white);
             font-size: 0.85rem;
             padding: 10px 0;
@@ -267,68 +267,6 @@
                 padding: 10px 14px;
             }
         }
-
-        .page-header {
-            background: #fff4c2;
-            padding: 42px 20px;
-            text-align: center;
-        }
-
-        .page-header h1 {
-            margin: 0;
-            font-size: 2rem;
-            color: #5c2d91;
-            letter-spacing: 0.02em;
-            font-weight: 700;
-        }
-
-        .page-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 36px 20px 60px;
-        }
-
-        .section-title {
-            margin: 0 0 24px;
-            color: #d30e3c;
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-        }
-
-        .page-content p {
-            margin: 0 0 1.5rem;
-            font-size: 1.05rem;
-            line-height: 1.8;
-            font-weight: 600;
-            color: #121212;
-        }
-
-        h3 {
-            margin: 2.5rem 0 1rem;
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: #111;
-        }
-
-        ul {
-            padding-left: 1.25rem;
-            margin: 0;
-            list-style: disc;
-        }
-
-        li {
-            margin-bottom: 0.85rem;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        @media (max-width: 520px) {
-            .page-header {
-                padding: 30px 16px;
-            }
-        }
     </style>
 </head>
 
@@ -404,72 +342,14 @@
 
         <div class="categories-bar">
             <div class="categories-inner">
-                <a href="#">Home</a>
-                <a href="#">Categories</a>
+                <a href="./index.html">Home</a>
+                <a href="./categories.html">Categories</a>
                 <a href="#">Best Seller</a>
                 <a href="how-to-order.html">How to Order</a>
                 <a href="#">Blog</a>
             </div>
         </div>
     </div>
-
-    <header class="page-header">
-        <h1>Privacy Policy</h1>
-    </header>
-    <main class="page-content">
-        <h2 class="section-title">Privacy Policy</h2>
-        <p>At KIDS STUFFS, protecting your personal information is a priority. This policy explains how we collect, use,
-            store, and share the information you provide when shopping with us. We are committed to keeping your data
-            safe and using it only to provide a better shopping experience.</p>
-
-        <h3>What Information We Collect</h3>
-        <p>We collect information that helps us process orders, deliver purchases, and communicate with you. This
-            includes:</p>
-        <ul>
-            <li>Your name, email, phone number, and shipping address.</li>
-            <li>Order details, payment confirmation, and shipping choices.</li>
-            <li>Device and browsing information, such as IP address and pages viewed.</li>
-        </ul>
-
-        <h3>How We Use Your Information</h3>
-        <ul>
-            <li>To process and ship your orders promptly.</li>
-            <li>To respond to customer service inquiries and support requests.</li>
-            <li>To send order updates, marketing offers, and promotional news when you opt in.</li>
-            <li>To improve our website, products, and customer experience.</li>
-        </ul>
-
-        <h3>Your Rights and Choices</h3>
-        <p>You can update your account information, unsubscribe from marketing, or request that we delete your data when
-            allowed by law. We only keep your personal information for as long as needed to fulfill the purposes
-            described in this policy.</p>
-
-        <h3>Keeping Your Data Safe</h3>
-        <p>We use reasonable security measures to protect your information. While no system is perfect, we work hard to
-            prevent unauthorized access, disclosure, or misuse of your personal data.</p>
-
-        <div id="services-panel-placeholder"></div>
-
-    </main>
-    <div id="footer-placeholder"></div>
-    <script>
-        const loadComponent = (url, placeholderId) => {
-            return fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    const template = document.createElement('div');
-                    template.innerHTML = html;
-                    const placeholder = document.getElementById(placeholderId);
-                    if (placeholder) placeholder.replaceWith(template);
-                })
-                .catch(error => {
-                    console.error(`Failed to load ${url}:`, error);
-                });
-        };
-
-        loadComponent('servicesPanel.html', 'services-panel-placeholder');
-        loadComponent('footer.html', 'footer-placeholder');
-    </script>
 </body>
 
 </html>
