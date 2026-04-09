@@ -305,6 +305,164 @@
             color: #121212;
         }
 
+        .blog-cards {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 36px 20px 60px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .blog-card {
+            background: #fff;
+            border: 1px solid rgba(230, 26, 82, 0.18);
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 8px;
+        }
+
+        .blog-card img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 4 / 5;
+        }
+
+        .blog-card-body {
+            padding: 16px 16px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .blog-card-body .meta {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .blog-card-body h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #111;
+        }
+
+        .blog-card-body p {
+            margin: 0;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .blog-card-body button {
+            border: none;
+            background: #e61a52;
+            color: #fff;
+            border-radius: 999px;
+            padding: 12px 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .blog-card-body button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px rgba(230, 26, 82, 0.18);
+        }
+
+        .blog-banner {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.08);
+        }
+
+        .blog-banner img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .blog-banner-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 30px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.55));
+        }
+
+        .banner-copy {
+            max-width: 700px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .banner-copy h2 {
+            margin: 0 0 18px;
+            font-size: 2.2rem;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .banner-copy p {
+            margin: 0 0 24px;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 600;
+        }
+
+        .banner-button {
+            border: none;
+            background: #fff;
+            color: #e61a52;
+            border-radius: 999px;
+            padding: 14px 28px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .banner-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px rgba(230, 26, 82, 0.18);
+        }
+
+        @media (max-width: 940px) {
+            .cards-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         h3 {
             margin: 2.5rem 0 1rem;
             font-size: 1.15rem;
@@ -414,43 +572,108 @@
     </div>
 
     <header class="page-header">
-        <h1>Privacy Policy</h1>
+        <h1>Blogs</h1>
     </header>
-    <main class="page-content">
-        <h2 class="section-title">Privacy Policy</h2>
-        <p>At KIDS STUFFS, protecting your personal information is a priority. This policy explains how we collect, use,
-            store, and share the information you provide when shopping with us. We are committed to keeping your data
-            safe and using it only to provide a better shopping experience.</p>
 
-        <h3>What Information We Collect</h3>
-        <p>We collect information that helps us process orders, deliver purchases, and communicate with you. This
-            includes:</p>
-        <ul>
-            <li>Your name, email, phone number, and shipping address.</li>
-            <li>Order details, payment confirmation, and shipping choices.</li>
-            <li>Device and browsing information, such as IP address and pages viewed.</li>
-        </ul>
+    <section class="blog-cards">
+        <div class="cards-grid">
+            <article class="blog-card">
+                <img src="images/blogs/1.png" alt="Blog post image 1">
+                <div class="blog-card-body">
+                    <div class="meta">08/04/2025</div>
+                    <h3>Updates On Educational Toys</h3>
+                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
+                    <button type="button">Read Now</button>
+                </div>
+            </article>
+            <article class="blog-card">
+                <img src="images/blogs/2.png" alt="Blog post image 2">
+                <div class="blog-card-body">
+                    <div class="meta">08/04/2025</div>
+                    <h3>Updates On Educational Toys</h3>
+                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
+                    <button type="button">Read Now</button>
+                </div>
+            </article>
+            <article class="blog-card">
+                <img src="images/blogs/3.png" alt="Blog post image 3">
+                <div class="blog-card-body">
+                    <div class="meta">08/04/2025</div>
+                    <h3>Updates On Educational Toys</h3>
+                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
+                    <button type="button">Read Now</button>
+                </div>
+            </article>
+            <article class="blog-card">
+                <img src="images/blogs/4.png" alt="Blog post image 4">
+                <div class="blog-card-body">
+                    <div class="meta">08/04/2025</div>
+                    <h3>Updates On Educational Toys</h3>
+                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
+                    <button type="button">Read Now</button>
+                </div>
+            </article>
+            <article class="blog-card">
+                <img src="images/blogs/5.png" alt="Blog post image 5">
+                <div class="blog-card-body">
+                    <div class="meta">08/04/2025</div>
+                    <h3>Updates On Educational Toys</h3>
+                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
+                    <button type="button">Read Now</button>
+                </div>
+            </article>
+            <article class="blog-card">
+                <img src="images/blogs/6.png" alt="Blog post image 6">
+                <div class="blog-card-body">
+                    <div class="meta">08/04/2025</div>
+                    <h3>Updates On Educational Toys</h3>
+                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
+                    <button type="button">Read Now</button>
+                </div>
+            </article>
+            <article class="blog-card">
+                <img src="images/blogs/7.png" alt="Blog post image 7">
+                <div class="blog-card-body">
+                    <div class="meta">08/04/2025</div>
+                    <h3>Updates On Educational Toys</h3>
+                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
+                    <button type="button">Read Now</button>
+                </div>
+            </article>
+            <article class="blog-card">
+                <img src="images/blogs/8.png" alt="Blog post image 8">
+                <div class="blog-card-body">
+                    <div class="meta">08/04/2025</div>
+                    <h3>Updates On Educational Toys</h3>
+                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
+                    <button type="button">Read Now</button>
+                </div>
+            </article>
+            <article class="blog-card">
+                <img src="images/blogs/9.png" alt="Blog post image 9">
+                <div class="blog-card-body">
+                    <div class="meta">08/04/2025</div>
+                    <h3>Updates On Educational Toys</h3>
+                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
+                    <button type="button">Read Now</button>
+                </div>
+            </article>
+        </div>
+    </section>
 
-        <h3>How We Use Your Information</h3>
-        <ul>
-            <li>To process and ship your orders promptly.</li>
-            <li>To respond to customer service inquiries and support requests.</li>
-            <li>To send order updates, marketing offers, and promotional news when you opt in.</li>
-            <li>To improve our website, products, and customer experience.</li>
-        </ul>
+    <section class="blog-banner">
+        <img src="images/blogs/banner.png" alt="Blog banner">
+        <div class="blog-banner-content">
+            <div class="banner-copy">
+                <h2>The Coolest Toy Store That Has Fluffy &amp; Slushy Toys</h2>
+                <p>Grab yours until it goes out of stock. Shop our limited-time collection of plush and playful
+                    favorites.</p>
+                <button type="button" class="banner-button">View All</button>
+            </div>
+        </div>
+    </section>
+    <div id="services-panel-placeholder"></div>
 
-        <h3>Your Rights and Choices</h3>
-        <p>You can update your account information, unsubscribe from marketing, or request that we delete your data when
-            allowed by law. We only keep your personal information for as long as needed to fulfill the purposes
-            described in this policy.</p>
-
-        <h3>Keeping Your Data Safe</h3>
-        <p>We use reasonable security measures to protect your information. While no system is perfect, we work hard to
-            prevent unauthorized access, disclosure, or misuse of your personal data.</p>
-
-        <div id="services-panel-placeholder"></div>
-
-    </main>
     <div id="footer-placeholder"></div>
     <script>
         const loadComponent = (url, placeholderId) => {
