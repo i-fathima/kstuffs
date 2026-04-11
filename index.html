@@ -897,11 +897,12 @@
 
         <div class="top-bar">
             <div class="top-inner">
-                <div class="top-text">BUYING IN BULK?...CLICK HERE</div>
+                <div class="top-text" onclick="window.location.href='./wholesale.html'"
+                    style="cursor:pointer; text-decoration:none;">BUYING IN BULK?...CLICK HERE</div>
                 <div class="top-links">
-                    <a href="#">Delivery Information</a>
-                    <a href="#">Track My Order</a>
-                    <a href="#">FAQs</a>
+                    <a href="./delivery.html">Delivery Information</a>
+                    <a href="./track.html">Track My Order</a>
+                    <a href="./faq.html">FAQ</a>
                     <span class="icon">🕒</span>
                 </div>
             </div>
@@ -930,8 +931,10 @@
                 </div>
 
                 <div class="action-group">
-                    <button class="cta">Wholesale Deals</button>
-                    <button class="icon-button" aria-label="Cart">
+                    <button class="cta" type="button" onclick="window.location.href='./wholesale.html'">Wholesale
+                        Deals</button>
+                    <button class="icon-button" aria-label="Cart" type="button"
+                        onclick="window.location.href='./cart.html'">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 6H21L20 14H8L6 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
